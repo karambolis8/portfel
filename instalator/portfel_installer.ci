@@ -1,0 +1,97 @@
+<*project
+      version = 4 civer = "Free v4.14.5" winver = "2.6/5.1.2600" > 
+   <output> C:\Documents and Settings\adam\Moje dokumenty\code\portfel\instalator</>
+   <exename> update.exe</>
+   <digitsign> </>
+   <appname> Portfel</>
+   <password> </>
+   <addlang> </>
+   <icon> Default - 1</>
+   <selfextr> 1</>
+   <voltype> nolimit</>
+   <volsize> </>
+   <volpattern> disk%i.pak</>
+   <load> </>
+   <loadtime> 1000</>
+   <checktype> admin</>
+   <chkname> </>
+   <chkmsg> </>
+   <dlgfont> Verdana,8</>
+   <lang> Polish</>
+   <theme> Green</>
+   <iface> leftlogo</>
+   <leftlogo> </>
+   <logo> </>
+   <vb> </>
+   <dao> </>
+   <background> 0</>
+   <dlgwelcome> 1</>
+   <dlgreadme> </>
+   <dlglic> C:\Documents and Settings\adam\Moje dokumenty\code\portfel\instalator\pliki\license.txt</>
+   <dlgcustpath> </>
+   <dlgenfpath> 0</>
+   <dlgsavepath> 1</>
+   <dlgautoprog> 1</>
+   <dlgfinish> 1</>
+   <comptype> ppmdmax</>
+   <solid> 0</>
+   <srcfolder> C:\Documents and Settings\adam\Moje dokumenty\code\portfel\instalator\pliki</>
+   <ifexist> over</>
+   <runafter> </>
+   <runconfirm> 0</>
+   <uninclude> 1</>
+   <unicon> Default - 1</>
+   <unshortcut> 0</>
+   <unrun> </>
+   <silent> 0</>
+   <unfeed> </>
+   <unautoclose> 1</>
+   <unfinish> 1</>
+   <bl> My Demo</>
+   <blurl> </>
+   <bghead> </>
+   <bgfoot> </> 
+   <bgback> </>
+   <files listview >
+      <_><src>54445</><dest>inst</><custom></><ifexist>overnewer</><recurs>0</></>
+
+   </files>
+   <runx listview >
+      
+   </runx>
+   <registry listview >
+      <_><root>locmach</><subkey>SOFTWARE\Microsoft\Windows\CurrentVersion\App Paths\portfel.exe</><valname></><valtype>str</><valdata>#setuppath#\portfel.exe</></>
+<_><root>class</><subkey>Portfel.Profile</><valname></><valtype>str</><valdata></></>
+<_><root>class</><subkey>Portfel.Profile\DefaultIcon</><valname></><valtype>str</><valdata>#setuppath#\wallet.ico</></>
+<_><root>class</><subkey>Portfel.Profile\shell</><valname>open</><valtype>str</><valdata></></>
+<_><root>class</><subkey>Portfel.Profile</><valname>shell</><valtype>str</><valdata></></>
+<_><root>class</><subkey>Portfel.Profile\shell\open\command</><valname></><valtype>str</><valdata>#setuppath#\portfel.exe "%1"</></>
+<_><root>class</><subkey>.pr</><valname></><valtype>str</><valdata>Portfel.Profile</></>
+<_><root>class</><subkey>Portfel.Profile</><valname></><valtype>str</><valdata>Plik profilu programu Portfel</></>
+
+   </registry>
+   <shcut listview >
+      <_ disable = 1><shpath>prog</><shname>Portfel</><tarpath>inst</><tarname>portfel.exe</><cmdline></><workpath>inst</><workcust></><icon>wallet.ico</></>
+<_ disable = 1><shpath>desk</><shname>Portfel</><tarpath>inst</><tarname>portfel.exe</><cmdline></><workpath>inst</><workcust></><icon>wallet.ico</></>
+
+   </shcut>
+   <ini listview >
+      
+   </ini>
+   <copy listview >
+      
+   </copy>
+   <activex listview >
+      
+   </activex>
+   <font listview >
+      
+   </font>
+   <ext listview >
+      
+   </ext>
+   <mreg listview >
+      
+   </mreg>
+   <macros> Pathadd=</>
+</project>

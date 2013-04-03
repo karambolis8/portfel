@@ -1,0 +1,22 @@
+-Program
+Program jest rozpowszechniany na licencji Freeware. Mo¿esz zatem rozpowszechniaæ
+go jeœli nie czerpiesz z tego korzyœci finansowych.
+
+-Ikony
+--Must Have Icons:
+Wszystkie ikony w programie poza ikonami z menu Opcje|Jêzyk oraz g³ówn¹ ikon¹ programu
+pochodz¹ z pakietu Must Have Icons by VisualPharm.
+Zosta³y stworzone przez Ivana Boyko. S¹ rozpowszechniane na licencji
+Attribution-No Derivative Works 3.0 Unported.
+
+--Web:
+G³ówna ikona programu pochodzi z pakietu Web by DaPino. Jest rozpowszechniana na 
+licencji Attribution-Noncommercial 3.0 Unported.
+
+--Flagi:
+Ikony flag pochodz¹ z pakietu I'm not a Patriot by Mayosoft(R).
+
+------
+Korzystanie z programu oznacza akceptacjê tej licencji. Jeœli chcesz korzystaæ z 
+ikon wykorzystywanych w programie, musisz siê zapoznaæ z odpowiadaj¹cymi im 
+licencjami (linki do licencji znajduj¹ siê na stronie domowej programu).

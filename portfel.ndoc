@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<project SchemaVersion="2.0">
+    <assemblies>
+        <assembly location=".\bin\Release\portfel.exe" documentation=".\bin\Release\doc.xml" />
+    </assemblies>
+    <documenters>
+        <documenter name="MSDN-Help2">
+            <property name="PlugInNamespace" value="ms.vscc" />
+            <property name="OutputDirectory" value="C:\Documents and Settings\adam\Pulpit\" />
+            <property name="HtmlHelpName" value="Documentation" />
+            <property name="Title" value="An NDoc documented library" />
+        </documenter>
+        <documenter name="Intellisense">
+            <property name="OutputDirectory" value="C:\Documents and Settings\adam\Pulpit\" />
+        </documenter>
+        <documenter name="MSDN-Web">
+            <property name="OutputDirectory" value="C:\Documents and Settings\adam\Moje dokumenty\code\portfel\doc\" />
+            <property name="HtmlHelpName" value="Portfel documentation" />
+            <property name="Title" value="Dokumentacja programu Portfel" />
+            <property name="LangId" value="1045" />
+            <property name="Version" value="0.7.7" />
+            <property name="DocumentInheritedFrameworkMembers" value="False" />
+            <property name="DocumentInternals" value="True" />
+            <property name="DocumentPrivates" value="True" />
+            <property name="FeedbackEmailAddress" value="karambolis8@gmail.com" />
+            <property name="AutoDocumentConstructors" value="False" />
+            <property name="AutoDocumentStaticClasses" value="False" />
+            <property name="IncludeDefaultThreadSafety" value="False" />
+            <property name="CleanIntermediates" value="True" />
+        </documenter>
+    </documenters>
+</project>
