@@ -393,14 +393,7 @@ namespace portfel
         private void stats_button_Click(object sender, EventArgs e)
         {
 #if DEBUG
-            double tmp = 0;
-            foreach(Expense exp in this.portfel.hist.FindAll(ex => ex.date.Month == DateTime.Today.Month && ex.category != "wyrównanie" && ex.date.Year == DateTime.Today.Year))
-                if(exp.value < 0)
-                    tmp += exp.value;
-            string txt = ((-tmp)/DateTime.Today.Day/2).ToString();
-            MainForm.MessageBoxWrapper(txt, MessageType.IOK);
-
-            //new StatsForm(this.portfel.categories, this.portfel.hist).ShowDialog(this);
+            new StatsForm(this.portfel.categories, this.portfel.hist).ShowDialog(this);
 #else
             MainForm.MessageBoxWrapper("Niedostępne w tej wersji", MessageType.IOK);
 #endif

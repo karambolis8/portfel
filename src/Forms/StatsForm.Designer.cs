@@ -49,8 +49,7 @@ namespace portfel
             this.endDateCheckBox = new System.Windows.Forms.CheckBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.descTextBox = new System.Windows.Forms.TextBox();
-            this.descCheckBox = new System.Windows.Forms.CheckBox();
+            this.addAllButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // startDate
@@ -107,7 +106,7 @@ namespace portfel
             // 
             // addButton
             // 
-            this.addButton.Location = new System.Drawing.Point(164, 295);
+            this.addButton.Location = new System.Drawing.Point(164, 278);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(44, 23);
             this.addButton.TabIndex = 6;
@@ -117,7 +116,7 @@ namespace portfel
             // 
             // removeButton
             // 
-            this.removeButton.Location = new System.Drawing.Point(164, 324);
+            this.removeButton.Location = new System.Drawing.Point(164, 307);
             this.removeButton.Name = "removeButton";
             this.removeButton.Size = new System.Drawing.Size(44, 23);
             this.removeButton.TabIndex = 7;
@@ -127,7 +126,7 @@ namespace portfel
             // 
             // removeAllButton
             // 
-            this.removeAllButton.Location = new System.Drawing.Point(164, 352);
+            this.removeAllButton.Location = new System.Drawing.Point(164, 365);
             this.removeAllButton.Name = "removeAllButton";
             this.removeAllButton.Size = new System.Drawing.Size(44, 23);
             this.removeAllButton.TabIndex = 8;
@@ -233,32 +232,22 @@ namespace portfel
             this.label6.TabIndex = 22;
             this.label6.Text = "Kategorie";
             // 
-            // descTextBox
+            // addAllButton
             // 
-            this.descTextBox.Enabled = false;
-            this.descTextBox.Location = new System.Drawing.Point(74, 181);
-            this.descTextBox.Name = "descTextBox";
-            this.descTextBox.Size = new System.Drawing.Size(100, 20);
-            this.descTextBox.TabIndex = 24;
-            // 
-            // descCheckBox
-            // 
-            this.descCheckBox.AutoSize = true;
-            this.descCheckBox.Location = new System.Drawing.Point(212, 187);
-            this.descCheckBox.Name = "descCheckBox";
-            this.descCheckBox.Size = new System.Drawing.Size(45, 17);
-            this.descCheckBox.TabIndex = 25;
-            this.descCheckBox.Text = "opis";
-            this.descCheckBox.UseVisualStyleBackColor = true;
-            this.descCheckBox.CheckedChanged += new System.EventHandler(this.descCheckBox_CheckedChanged);
+            this.addAllButton.Location = new System.Drawing.Point(164, 336);
+            this.addAllButton.Name = "addAllButton";
+            this.addAllButton.Size = new System.Drawing.Size(44, 23);
+            this.addAllButton.TabIndex = 23;
+            this.addAllButton.Text = ">>";
+            this.addAllButton.UseVisualStyleBackColor = true;
+            this.addAllButton.Click += new System.EventHandler(this.addAllButton_Click);
             // 
             // StatsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(368, 435);
-            this.Controls.Add(this.descCheckBox);
-            this.Controls.Add(this.descTextBox);
+            this.Controls.Add(this.addAllButton);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.endDateCheckBox);
@@ -310,7 +299,6 @@ namespace portfel
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ColumnHeader categoryColumnHeader;
         private System.Windows.Forms.ColumnHeader categoryColumn;
-        private System.Windows.Forms.TextBox descTextBox;
-        private System.Windows.Forms.CheckBox descCheckBox;
+        private System.Windows.Forms.Button addAllButton;
     }
 }

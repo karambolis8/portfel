@@ -66,8 +66,22 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="ZedGraph, Version=5.1.5.28844, Culture=neutral, PublicKeyToken=02a83cbd123fcd60, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll\zedgraph_dll_v5.1.5\ZedGraph.dll</HintPath>
+    </Reference>
+    <Reference Include="ZedGraph.Web, Version=5.1.5.29221, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll\zedgraph_dll_v5.1.5\ZedGraph.Web.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="src\Forms\ChartForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Forms\ChartForm.Designer.cs">
+      <DependentUpon>ChartForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="src\Forms\ExportForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -133,6 +147,10 @@
       <DependentUpon>CategoriesListForm.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="src\Forms\ChartForm.resx">
+      <DependentUpon>ChartForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="src\Forms\ConstExpenseForm.resx">
       <DependentUpon>ConstExpenseForm.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -167,7 +185,6 @@
     <Compile Include="src\UserProfile\UserProfile.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="changelog.txt" />
     <Content Include="src\Program\wallet.ico" />
     <Content Include="wallet.ico" />
   </ItemGroup>

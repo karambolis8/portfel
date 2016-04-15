@@ -3,6 +3,7 @@ using System;
 using System.Windows.Forms;
 using System.Collections.Generic;
 using Wallet;
+using portfel.src.Forms;
 
 
 namespace portfel
@@ -18,10 +19,6 @@ namespace portfel
             this.expenses = expList;
             foreach(string c in categories)
                 this.categoriesListView.Items.Add(new ListViewItem(c));
-
-#if DEBUG
-            MainForm.MessageBoxWrapper("Zrobic z tego filterform (:", MessageType.EOK);
-#endif
         }
 
         private void closeButton_Click(object sender, EventArgs e)
@@ -32,6 +29,15 @@ namespace portfel
         private void addButton_Click(object sender, EventArgs e)
         {
             foreach(ListViewItem item in this.categoriesListView.SelectedItems)
+            {
+                this.categoriesListView.Items.Remove(item);
+                this.filterListView.Items.Add(item);
+            }
+        }
+
+        private void addAllButton_Click(object sender, EventArgs e)
+        {
+            foreach(ListViewItem item in this.categoriesListView.Items)
             {
                 this.categoriesListView.Items.Remove(item);
                 this.filterListView.Items.Add(item);
@@ -76,11 +82,6 @@ namespace portfel
             this.maxValTextBox.Enabled = this.maxValCheckBox.Checked;
         }
 
-        private void descCheckBox_CheckedChanged(object sender, EventArgs e)
-        {
-            this.descTextBox.Enabled = this.descCheckBox.Checked;
-        }
-
         private void acceptButton_Click(object sender, EventArgs _)
         {
             double minVal = 0;
@@ -121,8 +122,6 @@ namespace portfel
                     return false;
                 if(this.maxValCheckBox.Checked && e.value > maxVal)
                     return false;
-                if(this.descCheckBox.Checked && e.description != this.descTextBox.Text)
-                    return false;
                 if(this.filterListView.Items.Count > 0 && !this.filterListView.Items.ContainsKey(e.category))
                     return false;
                 return true;
@@ -144,12 +143,10 @@ namespace portfel
                         min = e.value;
                 }
             }
-            string text = "";
-            text += "Największa kwota: " + max.ToString() + "\n";
-            text += "Najmniejsza kwota: " + min.ToString() + "\n";
-            text += "Kwota śrendnia: " + (sum/i).ToString() + "\n";
-            text += "Suma: " + sum.ToString();
-            MainForm.MessageBoxWrapper(text, MessageType.IOK);
+
+            ChartForm chartForm = new ChartForm();
+            chartForm.SetUpPieChart(this.expenses);
+            chartForm.ShowDialog(this);
         }
     }
 }
